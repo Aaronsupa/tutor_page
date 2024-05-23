@@ -17,18 +17,18 @@ function App() {
             </Box>
           </HStack>
       </Box>
-      <Box bg='FFFFF' w='60%' h = '30%' p={3} color='black' borderWidth='2px' borderRadius='lg' borderColor='#D9D9D9' boxShadow='6px 6px #D9D9D9;'>
-        <HStack spacing='10px' h = "80%" w = "100%">
+      <Box bg='FFFFF' w='60%' h = '25%' p={2} color='black' borderWidth='2px' borderRadius='lg' borderColor='#D9D9D9' boxShadow='6px 6px #D9D9D9;'  display="flex" alignItems="center">
+        <HStack spacing='10px' h = "90%" w = "100%">
           <VStack spacing='24px' h = "100%" w = "50%" p={0}>
             <Box w='100%' h='100%' bg='#D9D9D9'>
               1
             </Box>
           </VStack>
           <VStack spacing='24px' h = "100%" w = "50%">
-            <Box w='90%' h='90%' bg='#D9D9D9'>
+            <Box w='100%' h='55%' bg='#D9D9D9'>
               1
             </Box>
-            <Box w='90%' h='90%' bg='#D9D9D9'>
+            <Box w='100%' h='45%' bg='#D9D9D9'>
               2
             </Box>
           </VStack>

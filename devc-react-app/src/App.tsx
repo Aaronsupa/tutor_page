@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Box, Card, Center, Container, Divider, Flex, FormControl, FormHelperText, FormLabel, HStack, Input, Spacer, VStack } from '@chakra-ui/react'
+import { Box, Card, Center, Container, Divider, Flex, FormControl, FormHelperText, FormLabel, HStack, Input, Spacer, Stack, VStack, Text} from '@chakra-ui/react'
+import { Heading } from '@chakra-ui/react'
 import './App.css'
 
 function App() {
@@ -7,61 +8,88 @@ function App() {
 
   return (
     <>
-      <Box bg='FFFFF' w='45%' h = '20%' p={3} color='black' borderWidth='2px' borderRadius='lg' borderColor='#D9D9D9' boxShadow='6px 6px #D9D9D9;' display="flex" alignItems="center">
-          <HStack spacing='24px' h = "80%" w = "100%">
-            <Box w='30%' h='90%' bg='#D9D9D9'>
-              1
-            </Box>
-            <Box w='70%' h='90%' bg='#D9D9D9'>
-              2
-            </Box>
-          </HStack>
+      <Box w='40%' h = '20%' display="flex" flexDirection='column'>
+        <Heading as='h2' size='xl' color='#1F4172' display='flex' marginLeft='5%'>
+          About Me
+        </Heading>
+        <Box bg='FFFFF' w='100%' h = '100%' p={3} color='black' borderWidth='2px' borderRadius='lg' borderColor='#D9D9D9' boxShadow='6px 6px #D9D9D9;' shadow='lg' display="flex" alignItems="center">
+            <HStack spacing='24px' h = "80%" w = "100%">
+              <Box w='30%' h='90%' bg='#D9D9D9'>
+                1
+              </Box>
+              <Box w='70%' h='90%' bg='#D9D9D9'>
+                2
+              </Box>
+            </HStack>
+        </Box>
       </Box>
-      <Box bg='FFFFF' w='60%' h = '25%' p={2} color='black' borderWidth='2px' borderRadius='lg' borderColor='#D9D9D9' boxShadow='6px 6px #D9D9D9;'  display="flex" alignItems="center">
-        <HStack spacing='10px' h = "90%" w = "100%">
-          <VStack spacing='24px' h = "100%" w = "50%" p={0}>
-            <Box w='100%' h='100%' bg='#D9D9D9'>
-              1
-            </Box>
-          </VStack>
-          <VStack spacing='24px' h = "100%" w = "50%">
-            <Box w='100%' h='55%' bg='#D9D9D9'>
-              1
-            </Box>
-            <Box w='100%' h='45%' bg='#D9D9D9'>
-              2
-            </Box>
-          </VStack>
-        </HStack>
+      <Box w='55%' h = '20%'>
+        <Heading as='h2' size='xl' color='#1F4172' display='flex' marginLeft='5%'>
+          Information
+        </Heading>
+          <Box bg='#D9D9D9' w='100%' h = '100%' color='black' borderWidth='2px' borderRadius='lg' borderColor='#D9D9D9' boxShadow='6px 6px #D9D9D9;' shadow='xl' display="flex" alignItems="center">
+            <HStack spacing='10px' h = "90%" w = "100%">
+              <VStack spacing='24px' h = "100%" w = "40%">
+                <Box w='60%' h='100%' display="flex" justifyContent="left" alignItems='center' >
+                  <Stack p={4}>
+                    <Text fontSize='2xl' alignItems="center" display="flex" as="b">🧮 Math</Text>
+                    <Text fontSize='xl'alignItems="left" display="flex">- Algebra</Text>
+                    <Text fontSize='xl'alignItems="left" display="flex">- Pre Calculus</Text>
+                    <Text fontSize='2xl'alignItems="left" display="flex" as="b">🧪 Science</Text>
+                    <Text fontSize='xl' alignItems="left" display="flex">- Chemistry</Text>
+                    <Text fontSize='2xl' alignItems="left" display="flex" as="b">📝 English</Text>
+                    <Text fontSize='xl' alignItems="left" display="flex">- Essay Review</Text>
+                    <Text fontSize='2xl' alignItems="left" display="flex" as="b">Spanish</Text>
+                  </Stack>
+                </Box>
+              </VStack>
+              <Divider orientation='vertical' borderColor="#1F4172" borderWidth='2px' h='100%'></Divider>
+              <VStack spacing='24px' h = "100%" w = "60%">
+                <Box w='80%' h='55%' bg='#D9D9D9'>
+                  <Text  fontSize='2xl' alignItems="center" display="flex" as="b">Meetings</Text>
+                </Box>
+                <Box w='80%' h='45%' bg='#D9D9D9'>
+                  <Text  fontSize='2xl' alignItems="center" display="flex" as="b">Tutoring Levels</Text>
+                </Box>
+              </VStack>
+            </HStack>
+          </Box>
       </Box>
-      <Box bg="#1F4172" w='100%' h = '15%' p={4} color='black'>
-        Testimonials
+      <Box bg="#1F4172" w='100%' h = '15%' p={4} color='black' marginTop='5vh'>
+        <Heading as='h2' size='xl' color='white' display='flex' justifyContent='center'>
+          Testimonials
+        </Heading>
       </Box>
-      <Box bg='FFFFF' w='60%' h = '20%' p={4} color='black' borderWidth='2px' borderRadius='lg' borderColor='#D9D9D9' boxShadow='6px 6px #D9D9D9;'>
-        <Flex>
-            <Container>
-              <FormControl>
-                <FormLabel>Email address</FormLabel>
-                <Input type='email' />
-                <FormHelperText>We'll never share your email.</FormHelperText>
-                <FormLabel>Email address</FormLabel>
-                <Input type='email' />
-                <FormHelperText>We'll never share your email.</FormHelperText>
-                <FormLabel>Email address</FormLabel>
-                <Input type='email' />
-                <FormHelperText>We'll never share your email.</FormHelperText>
-              </FormControl>
-            </Container>
-            <Container p={4}>
-              <p>afwafad adwa dwa
-              wad wadadw adwa
-              dwa dwadwadwadwada
-              dwadwa afwafad adwa dwa
-              wad wadadw adwa
-              dwa dwadwadwadwada
-              dwadwa</p>
-            </Container>
-          </Flex>
+      <Box w='60%' h = '20%'>
+        <Heading as='h2' size='xl' color='#1F4172' display='flex' marginLeft='5%'>
+          Contact Me & Schedule
+        </Heading>
+        <Box bg='FFFFF' w='100%' h = '100%' p={4} color='black' borderWidth='2px' borderRadius='lg' borderColor='#D9D9D9' boxShadow='6px 6px #D9D9D9;' shadow='lg' >
+          <Flex>
+              <Container>
+                <FormControl>
+                  <FormLabel>First Name</FormLabel>
+                  <Input type='text' />
+                  <FormLabel>Last Name</FormLabel>
+                  <Input type='text' />
+                  <FormLabel>Current Grade Level</FormLabel>
+                  <Input type='number' />
+                  <FormLabel>Email address</FormLabel>
+                  <Input type='email' />
+                  <FormHelperText>We'll never share your email.</FormHelperText>
+                </FormControl>
+              </Container>
+              <Container p={4}>
+                <p>afwafad adwa dwa
+                wad wadadw adwa
+                dwa dwadwadwadwada
+                dwadwa afwafad adwa dwa
+                wad wadadw adwa
+                dwa dwadwadwadwada
+                dwadwa</p>
+              </Container>
+            </Flex>
+        </Box>
       </Box>
       <Box bg="#1F4172" w='100%' h = '5%' p={4} color='black'>
         Footer

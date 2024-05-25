@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Box, Card, Center, Container, Divider, Flex, FormControl, FormHelperText, FormLabel, HStack, Input, Spacer, Stack, VStack, Text} from '@chakra-ui/react'
+import { Box, Card, Center, Container, Divider, Flex, FormControl, FormHelperText, FormLabel, HStack, Input, Spacer, Stack, VStack, Text, Button, Link} from '@chakra-ui/react'
 import { Heading } from '@chakra-ui/react'
 import './App.css'
 
@@ -40,6 +40,7 @@ function App() {
                     <Text fontSize='2xl' alignItems="left" display="flex" as="b">📝 English</Text>
                     <Text fontSize='xl' alignItems="left" display="flex">- Essay Review</Text>
                     <Text fontSize='2xl' alignItems="left" display="flex" as="b">Spanish</Text>
+                    <Text fontSize='x1' alignItems="left" display="flex">- Honors III</Text>
                   </Stack>
                 </Box>
               </VStack>
@@ -60,33 +61,31 @@ function App() {
           Testimonials
         </Heading>
       </Box>
-      <Box w='60%' h = '20%'>
+      <Box w='55%' h = '20%'>
         <Heading as='h2' size='xl' color='#1F4172' display='flex' marginLeft='5%'>
           Contact Me & Schedule
         </Heading>
         <Box bg='FFFFF' w='100%' h = '100%' p={4} color='black' borderWidth='2px' borderRadius='lg' borderColor='#D9D9D9' boxShadow='6px 6px #D9D9D9;' shadow='lg' >
           <Flex>
-              <Container>
-                <FormControl>
+              <Container w = '60%'>
+                <FormControl isRequired>
                   <FormLabel>First Name</FormLabel>
-                  <Input type='text' />
+                  <Input type='text' placeholder='First Name' focusBorderColor='teal' />
                   <FormLabel>Last Name</FormLabel>
-                  <Input type='text' />
+                  <Input type='text' placeholder='Last Name' focusBorderColor='teal' />
                   <FormLabel>Current Grade Level</FormLabel>
-                  <Input type='number' />
-                  <FormLabel>Email address</FormLabel>
-                  <Input type='email' />
+                  <Input type='number' placeholder='Current Grade Level' focusBorderColor='teal'/>
+                  <FormLabel>Email Address</FormLabel>
+                  <Input type='email' placeholder='Email Address' focusBorderColor='teal'/>
                   <FormHelperText>We'll never share your email.</FormHelperText>
                 </FormControl>
               </Container>
-              <Container p={4}>
-                <p>afwafad adwa dwa
-                wad wadadw adwa
-                dwa dwadwadwadwada
-                dwadwa afwafad adwa dwa
-                wad wadadw adwa
-                dwa dwadwadwadwada
-                dwadwa</p>
+              <Container p={4} display="flex" justifyContent="center" alignItems="center">
+              <Link href='' isExternal>
+                <Button colorScheme='blue' size='lg'>
+                    Schedule with Me!
+                </Button>
+              </Link>
               </Container>
             </Flex>
         </Box>

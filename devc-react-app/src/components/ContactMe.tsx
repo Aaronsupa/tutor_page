@@ -1,4 +1,5 @@
 import { Heading, Flex, Container, FormControl, FormLabel, Input, FormHelperText, Button, Link, Box, extendTheme } from "@chakra-ui/react";
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 const breakpoints = {
     base: '0px',
@@ -11,6 +12,7 @@ const breakpoints = {
 
 const theme = extendTheme({ breakpoints })
 
+
 /*
                 <Container p={4} display="flex" justifyContent="center" alignItems="center"> 
                 <Link href='' isExternal>
@@ -19,18 +21,7 @@ const theme = extendTheme({ breakpoints })
                     </Button>
                 </Link> 
 
-*/
-function ContactMe() {
-    return(
-        <>
-        <Box w={{ base: "90%", sm: "90%", md: "40%"}}  h = {{ base: "25%", sm: "25%", md: "25%"}}>
-            <Heading as='h2' size='xl' color='#1F4172' display='flex' marginLeft='5%'>
-            Contact Me
-            </Heading>
-            <Box bg='FFFFF' w='100%' h = '100%' p={4} color='black' borderWidth='2px' borderRadius='lg' borderColor='#D9D9D9' boxShadow='6px 6px #D9D9D9;' shadow='lg'>
-            <Flex>
-                <Container w = '70%'>
-                    <FormControl isRequired>
+                                    <FormControl isRequired>
                     <FormLabel>First Name</FormLabel>
                     <Input type='text' placeholder='First Name' focusBorderColor='teal' />
                     <FormLabel>Last Name</FormLabel>
@@ -48,6 +39,44 @@ function ContactMe() {
                         Submit
                     </Button>
                     </FormControl>
+*/
+function ContactMe() {
+    return(
+        <>
+        <Box w={{ base: "90%", sm: "90%", md: "40%"}}  h = {{ base: "25%", sm: "25%", md: "25%"}}>
+            <Heading as='h2' size='xl' color='#1F4172' display='flex' marginLeft='5%'>
+            Contact Me
+            </Heading>
+            <Box bg='FFFFF' w='100%' h = '100%' p={4} color='black' borderWidth='2px' borderRadius='lg' borderColor='#D9D9D9' boxShadow='6px 6px #D9D9D9;' shadow='lg'>
+            <Flex>
+                <Container w = '70%' display='flex' flexDirection='column'>
+                    <Formik
+                        initialValues={{ first: '', last: '', email: '', password: ''}}
+                        validate={values => {
+                        }}
+                        onSubmit={(values, { setSubmitting }) => {
+                            setTimeout(() => {
+                            alert(JSON.stringify(values, null, 2));
+                            setSubmitting(false);
+                            }, 400);
+                        }}
+                        >
+                        {({ isSubmitting }) => (
+                            <Form>
+                            <Field type="First Name" name="first" />
+                            <ErrorMessage name="first" component="div" />
+                            <Field type="Last Name" name="last" />
+                            <ErrorMessage name="last" component="div" />
+                            <Field type="email" name="email" />
+                            <ErrorMessage name="email" component="div" />
+                            <Field type="password" name="password" />
+                            <ErrorMessage name="password" component="div" />
+                            <button type="submit" disabled={isSubmitting}>
+                                Submit
+                            </button>
+                            </Form>
+                        )}
+                    </Formik>
                 </Container>
                 </Flex>
             </Box>

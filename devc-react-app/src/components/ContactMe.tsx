@@ -1,5 +1,7 @@
 import { Heading, Flex, Container, FormControl, FormLabel, Input, FormHelperText, Button, Link, Box, extendTheme } from "@chakra-ui/react";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import emailjs from "@emailjs/browser";
+import { useEffect } from "react";
 
 const breakpoints = {
     base: '0px',
@@ -41,6 +43,7 @@ const theme = extendTheme({ breakpoints })
                     </FormControl>
 */
 function ContactMe() {
+    
     return(
         <>
         <Box w={{ base: "90%", sm: "90%", md: "40%"}}  h = {{ base: "25%", sm: "25%", md: "25%"}}>
@@ -51,14 +54,28 @@ function ContactMe() {
             <Flex>
                 <Container w = '70%' display='flex' flexDirection='column'>
                     <Formik
-                        initialValues={{ first: '', last: '', email: '', password: ''}}
+                        initialValues={{ first: '', last: '', email: ''}}
                         validate={values => {
                         }}
                         onSubmit={(values, { setSubmitting }) => {
                             setTimeout(() => {
+                            var stringy = JSON.stringify(values, null, 2);
+                            var templateParams = {
+                                    first: "first",
+                                    last: "last",
+                                    email: "email@gmail.com"
+                            };
                             alert(JSON.stringify(values, null, 2));
-                            setSubmitting(false);
+                            emailjs.send("service","template", templateParams, {
+                                publicKey: "key",
+                              }).then(function(response) {
+                                console.log('SUCCESS!', response.status, response.text);
+                              }, function(error) {
+                                console.log('FAILED...', error);
+                              });
                             }, 400);
+                            setSubmitting(false);
+
                         }}
                         >
                         {({ isSubmitting }) => (
@@ -69,8 +86,6 @@ function ContactMe() {
                             <ErrorMessage name="last" component="div" />
                             <Field type="email" name="email" />
                             <ErrorMessage name="email" component="div" />
-                            <Field type="password" name="password" />
-                            <ErrorMessage name="password" component="div" />
                             <button type="submit" disabled={isSubmitting}>
                                 Submit
                             </button>

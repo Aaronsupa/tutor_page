@@ -49,13 +49,40 @@ const theme = extendTheme({ breakpoints })
 */
 function ContactMe() {
 
-    
     function validateEmail(value: string) {
         let error;
         if (!value) {
-        error = 'Required';
+            error = 'Required';
         } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
-        error = 'Invalid email address';
+            error = 'Invalid email address';
+        }
+        return error;
+    }
+
+    function validateFirst(value: String){
+        let error;
+        if (!value) {
+            error = 'Required';
+        } else if (value.length > 15) {
+            error = 'Must be 15 characters or less';
+        }
+        return error;
+    }
+    
+    function validateLast(value: String){
+        let error;
+        if (!value) {
+            error = 'Required';
+        } else if (value.length > 15) {
+            error = 'Must be 15 characters or less';
+        }
+        return error;
+    }
+
+    function validateMessage(value: String){
+        let error;
+        if(!value) {
+            error = 'Required';
         }
         return error;
     }
@@ -70,22 +97,21 @@ function ContactMe() {
             <Flex>
                 <Container w = '70%' display='flex' flexDirection='column'>
                     <Formik
-                        initialValues={{ first: '', last: '', email: ''}}
+                        initialValues={{ first: '', last: '', email: '', message: ''}}
                         validate={(values) => {
                         }}
                         onSubmit={(values, { setSubmitting }) => {
                             setTimeout(() => {
-                            var stringy = JSON.stringify(values, null, 2);
                             var templateParams = {
-                                    first: "first",
-                                    last: "last",
-                                    email: "email@gmail.com",
-                                    message: "message",
+                                    first: values.first,
+                                    last: values.last,
+                                    email: values.email,
+                                    message: values.message,
 
                             };
                             alert(JSON.stringify(values, null, 2));
-                            emailjs.send("service","template", templateParams, {
-                                publicKey: "key",
+                            emailjs.send("","", templateParams, {
+                                publicKey: "",
                               }).then(function(response) {
                                 console.log('SUCCESS!', response.status, response.text);
                               }, function(error) {
@@ -98,13 +124,13 @@ function ContactMe() {
                         >
                         {({ isSubmitting }) => (
                             <Form>
-                                <Field type="First Name" name="first" placeholder="First Name" validate={validateEmail}/>
+                                <Field type="First Name" name="first" placeholder="First Name" validate={validateFirst}/>
                                 <ErrorMessage name="first" component="div" />
-                                <Field type="Last Name" name="last" placeholder="Last Name"/>
+                                <Field type="Last Name" name="last" placeholder="Last Name" validate={validateLast}/>
                                 <ErrorMessage name="last" component="div"/>
-                                <Field type="email" name="email" placeholder="Email"/>
+                                <Field type="email" name="email" placeholder="Email" validate={validateEmail}/>
                                 <ErrorMessage name="email" component="div" />
-                                <Field type="text" as = "textarea" name="message" placeholder="Message" />
+                                <Field type="text" as = "textarea" name="message" placeholder="Message" validate={validateMessage} />
                                 <ErrorMessage name="message" component="div" />
                                 <button type="submit" disabled={isSubmitting}>
                                     Submit

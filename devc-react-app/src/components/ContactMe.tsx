@@ -80,15 +80,17 @@ function ContactMe() {
                         >
                         {({ isSubmitting }) => (
                             <Form>
-                            <Field type="First Name" name="first" />
-                            <ErrorMessage name="first" component="div" />
-                            <Field type="Last Name" name="last" />
-                            <ErrorMessage name="last" component="div" />
-                            <Field type="email" name="email" />
-                            <ErrorMessage name="email" component="div" />
-                            <button type="submit" disabled={isSubmitting}>
-                                Submit
-                            </button>
+                                <Field type="First Name" name="first" placeholder="First Name"/>
+                                <ErrorMessage name="first" component="div" />
+                                <Field type="Last Name" name="last" placeholder="Last Name"/>
+                                <ErrorMessage name="last" component="div"/>
+                                <Field type="email" name="email" placeholder="Email"/>
+                                <ErrorMessage name="email" component="div" />
+                                <Field type="text" as = "textarea" name="Message" placeholder="Message" />
+                                <ErrorMessage name="Message" component="div" />
+                                <button type="submit" disabled={isSubmitting}>
+                                    Submit
+                                </button>
                             </Form>
                         )}
                     </Formik>

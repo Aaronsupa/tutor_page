@@ -1,5 +1,11 @@
 import { Heading, Flex, Container, FormControl, FormLabel, Input, FormHelperText, Button, Link, Box, extendTheme } from "@chakra-ui/react";
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import {    Formik,
+    FormikHelpers,
+    FormikProps,
+    Form,
+    Field,
+    FieldProps, 
+    ErrorMessage} from 'formik';
 import emailjs from "@emailjs/browser";
 import { useEffect } from "react";
 
@@ -13,7 +19,6 @@ const breakpoints = {
   }
 
 const theme = extendTheme({ breakpoints })
-
 
 /*
                 <Container p={4} display="flex" justifyContent="center" alignItems="center"> 
@@ -43,6 +48,17 @@ const theme = extendTheme({ breakpoints })
                     </FormControl>
 */
 function ContactMe() {
+
+    
+    function validateEmail(value: string) {
+        let error;
+        if (!value) {
+        error = 'Required';
+        } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
+        error = 'Invalid email address';
+        }
+        return error;
+    }
     
     return(
         <>
@@ -55,7 +71,7 @@ function ContactMe() {
                 <Container w = '70%' display='flex' flexDirection='column'>
                     <Formik
                         initialValues={{ first: '', last: '', email: ''}}
-                        validate={values => {
+                        validate={(values) => {
                         }}
                         onSubmit={(values, { setSubmitting }) => {
                             setTimeout(() => {
@@ -63,7 +79,9 @@ function ContactMe() {
                             var templateParams = {
                                     first: "first",
                                     last: "last",
-                                    email: "email@gmail.com"
+                                    email: "email@gmail.com",
+                                    message: "message",
+
                             };
                             alert(JSON.stringify(values, null, 2));
                             emailjs.send("service","template", templateParams, {
@@ -80,14 +98,14 @@ function ContactMe() {
                         >
                         {({ isSubmitting }) => (
                             <Form>
-                                <Field type="First Name" name="first" placeholder="First Name"/>
+                                <Field type="First Name" name="first" placeholder="First Name" validate={validateEmail}/>
                                 <ErrorMessage name="first" component="div" />
                                 <Field type="Last Name" name="last" placeholder="Last Name"/>
                                 <ErrorMessage name="last" component="div"/>
                                 <Field type="email" name="email" placeholder="Email"/>
                                 <ErrorMessage name="email" component="div" />
-                                <Field type="text" as = "textarea" name="Message" placeholder="Message" />
-                                <ErrorMessage name="Message" component="div" />
+                                <Field type="text" as = "textarea" name="message" placeholder="Message" />
+                                <ErrorMessage name="message" component="div" />
                                 <button type="submit" disabled={isSubmitting}>
                                     Submit
                                 </button>

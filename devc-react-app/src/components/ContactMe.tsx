@@ -62,7 +62,7 @@ function ContactMe() {
     
     return(
         <>
-        <Box w={{ base: "90%", sm: "90%", md: "30%"}}  h = {{ base: "25%", sm: "25%", md: "20%"}} marginTop="5%">
+        <Box w={{ base: "90%", sm: "90%", md: "30%"}}  h = {{ base: "20%", sm: "20%", md: "20%"}} marginTop="5%" marginBottom="2%">
             <Heading as='h2' size='xl' color='#1F4172' display='flex' marginLeft='5%'>
             Contact Me
             </Heading>

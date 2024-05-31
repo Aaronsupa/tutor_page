@@ -1,4 +1,4 @@
-import { Heading, HStack, VStack, Stack, Divider, Box, Text, extendTheme, Link, Button } from "@chakra-ui/react";
+import { Heading, HStack, VStack, Stack, Divider, Box, Text, extendTheme, Link, Button, ListItem, UnorderedList } from "@chakra-ui/react";
 
 const breakpoints = {
     base: '0px',
@@ -18,38 +18,47 @@ function Information() {
         <Heading as='h2' size='xl' color='#1F4172' display='flex' marginLeft='5%'>
           Information
         </Heading>
-          <Box bg='#FEFAF6' w='100%' h = '100%' color='black' borderWidth='2px' borderRadius='lg' borderColor='#D9D9D9' boxShadow='6px 6px #D9D9D9;' shadow='xl' display="flex" alignItems="center">
+          <Box bg='#FEFAF6' w='100%' h = '100%' color='black' borderWidth='2px' borderRadius='lg' borderColor='#D9D9D9' boxShadow='6px 6px #D9D9D9;' shadow='xl' display="flex" alignItems="center" overflowY="scroll">
             <HStack spacing='10px' h = "90%" w = "100%">
               <VStack spacing='24px' h = "100%" w = "40%">
                 <Box w='60%' h='100%' display="flex" justifyContent="left" alignItems='center' >
                   <Stack>
                     <Text fontSize={{base: 'sm', sm: 'xl', md:'xl'}} alignItems="center" display="flex" as="b">🧮 Math</Text>
-                    <Text fontSize={{base: 'sm', sm: 'l', md:'xl'}} alignItems="left" display="flex">- Algebra</Text>
-                    <Text fontSize={{base: 'sm', sm: 'l', md:'xl'}} alignItems="left" display="flex">- Pre Calculus</Text>
+                    <UnorderedList>
+                      <ListItem>Pre-Calculus</ListItem>
+                      <ListItem>Algebra</ListItem>
+                    </UnorderedList>
                     <Text fontSize={{base: 'sm', sm: 'xl', md:'xl'}} alignItems="left" display="flex" as="b">🧪 Science</Text>
-                    <Text fontSize={{base: 'sm', sm: 'l', md:'xl'}} alignItems="left" display="flex">- Chemistry</Text>
+                    <UnorderedList>
+                      <ListItem>Chemistry</ListItem>
+                    </UnorderedList>
                     <Text fontSize={{base: 'sm', sm: 'xl', md:'xl'}} alignItems="left" display="flex" as="b">📝 English</Text>
-                    <Text fontSize={{base: 'sm', sm: 'l', md:'xl'}} alignItems="left" display="flex">- Essay Review</Text>
+                    <UnorderedList>
+                      <ListItem>Essay Review</ListItem>
+                    </UnorderedList>
                     <Text fontSize={{base: 'sm', sm: 'xl', md:'xl'}} alignItems="left" display="flex" as="b">Spanish</Text>
-                    <Text fontSize={{base: 'sm', sm: 'l', md:'xl'}} alignItems="left" display="flex">- Honors III</Text>
                   </Stack>
                 </Box>
               </VStack>
               <Divider orientation='vertical' borderColor="#1F4172" borderWidth='2px' h='100%'></Divider>
-              <VStack spacing='24px' h = "100%" w = "60%">
-                <Box w='80%' h='60%' bg='#FEFAF6' display="flex" flexDirection="column" justifyContent="space-between">
-                  <Text  fontSize={{base: 'sm', sm: 'xl', md:'2xl'}} alignItems="center" display="flex" as="b">Meetings</Text>
-                  <Text fontSize={{base: 'sm', sm: 'l', md:'xl'}} alignItems="left" display="flex">- For summer times, use the following Calendy link to book me! I am normally free Monday-Friday, 9-5</Text>
-                  <Link href="calendly.com/" isExternal>
+              <VStack spacing='24px' h = {{base: '100%', sm: '100%', md:'85%'}} w = "60%" display="flex" justifyContent="space-between">
+                <Box w='80%' h={{base: '80%', sm: '80%', md:'50%'}} bg='#FEFAF6' display="flex" flexDirection="column" justifyContent="space-between">
+                  <Text  fontSize={{base: 'sm', sm: 'xl', md:'xl'}} alignItems="center" display="flex" as="b">Meetings</Text>
+                  <UnorderedList>
+                    <ListItem>For summer times, use the following Calendy link to book me! I am normally free Monday-Friday, 9-5</ListItem>
+                  </UnorderedList>
+                  <Link href="calendly.com/" isExternal marginTop="3%">
                     <Button colorScheme="blue" variant="outline">
                       Schedule with me!
                     </Button>
                   </Link>
                 </Box>
-                <Box w='80%' h='40%' bg='#FEFAF6'>
-                  <Text  fontSize={{base: 'sm', sm: 'xl', md:'2xl'}} alignItems="center" display="flex" as="b">Tutoring Levels</Text>
-                  <Text fontSize={{base: 'sm', sm: 'l', md:'xl'}} alignItems="left" display="flex">- Upper School</Text>
-                  <Text fontSize={{base: 'sm', sm: 'l', md:'xl'}} alignItems="left" display="flex">- Middle School</Text>
+                <Box w={{base: '60%', sm: '60%', md:'30%'}}  h='40%' bg='#FEFAF6'>
+                  <Text  fontSize={{base: 'sm', sm: 'xl', md:'xl'}}  as="b">Tutoring Levels</Text>
+                    <UnorderedList>
+                      <ListItem>Upper School</ListItem>
+                      <ListItem>Middle School</ListItem>
+                    </UnorderedList>
                 </Box>
               </VStack>
             </HStack>

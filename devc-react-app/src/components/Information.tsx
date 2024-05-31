@@ -39,9 +39,12 @@ function Information() {
               <VStack spacing='24px' h = "100%" w = "60%">
                 <Box w='80%' h='55%' bg='#D9D9D9'>
                   <Text  fontSize={{base: 'sm', sm: 'xl', md:'2xl'}} alignItems="center" display="flex" as="b">Meetings</Text>
+                  <Text fontSize={{base: 'sm', sm: 'l', md:'xl'}} alignItems="left" display="flex">- For summer times, use the following Calendy link to book me! I am normally free Monday-Friday, 9-5</Text>
                 </Box>
                 <Box w='80%' h='45%' bg='#D9D9D9'>
                   <Text  fontSize={{base: 'sm', sm: 'xl', md:'2xl'}} alignItems="center" display="flex" as="b">Tutoring Levels</Text>
+                  <Text fontSize={{base: 'sm', sm: 'l', md:'xl'}} alignItems="left" display="flex">- Upper School</Text>
+                  <Text fontSize={{base: 'sm', sm: 'l', md:'xl'}} alignItems="left" display="flex">- Middle School</Text>
                 </Box>
               </VStack>
             </HStack>

@@ -5,18 +5,16 @@ import './App.css'
 import AboutMe from './components/AboutMe'
 import Information from './components/Information'
 import ContactMe from './components/ContactMe'
+import pic from "../assets/test-bkg.jpg"
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <AboutMe></AboutMe>
-    <Information></Information>
+      <AboutMe></AboutMe>
+      <Information></Information>
       <ContactMe></ContactMe>
-      <Box bg="#1F4172" w='100%' h = '5%' p={4} color='black'>
-        Footer
-      </Box>
     </>
   )
 }

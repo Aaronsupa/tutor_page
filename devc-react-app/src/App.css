@@ -1,13 +1,15 @@
 #root {
   max-width: 100vw;
-  height: 200vh;
+  height: 130vh;
   margin: 0 auto;
   text-align: center;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background-color: #F1EFEF;
+  background-image: url("assets/test-bkg.jpg");
+  background-color: rgba(255,255,255,0.6);
+  background-blend-mode: lighten;
 }
 
 .logo {

@@ -13,11 +13,6 @@ function App() {
     <>
     <AboutMe></AboutMe>
     <Information></Information>
-      <Box bg="#1F4172" w='100%' h = '15%' p={4} color='black' marginTop='5vh'>
-        <Heading as='h2' size='xl' color='white' display='flex' justifyContent='center'>
-          Testimonials
-        </Heading>
-      </Box>
       <ContactMe></ContactMe>
       <Box bg="#1F4172" w='100%' h = '5%' p={4} color='black'>
         Footer

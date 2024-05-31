@@ -1,4 +1,4 @@
-import { Heading, HStack, VStack, Stack, Divider, Box, Text, extendTheme } from "@chakra-ui/react";
+import { Heading, HStack, VStack, Stack, Divider, Box, Text, extendTheme, Link, Button } from "@chakra-ui/react";
 
 const breakpoints = {
     base: '0px',
@@ -37,11 +37,16 @@ function Information() {
               </VStack>
               <Divider orientation='vertical' borderColor="#1F4172" borderWidth='2px' h='100%'></Divider>
               <VStack spacing='24px' h = "100%" w = "60%">
-                <Box w='80%' h='55%' bg='#D9D9D9'>
+                <Box w='80%' h='60%' bg='#D9D9D9' display="flex" flexDirection="column" justifyContent="space-between">
                   <Text  fontSize={{base: 'sm', sm: 'xl', md:'2xl'}} alignItems="center" display="flex" as="b">Meetings</Text>
                   <Text fontSize={{base: 'sm', sm: 'l', md:'xl'}} alignItems="left" display="flex">- For summer times, use the following Calendy link to book me! I am normally free Monday-Friday, 9-5</Text>
+                  <Link href="calendly.com/" isExternal>
+                    <Button colorScheme="blue" variant="outline">
+                      Schedule with me!
+                    </Button>
+                  </Link>
                 </Box>
-                <Box w='80%' h='45%' bg='#D9D9D9'>
+                <Box w='80%' h='40%' bg='#D9D9D9'>
                   <Text  fontSize={{base: 'sm', sm: 'xl', md:'2xl'}} alignItems="center" display="flex" as="b">Tutoring Levels</Text>
                   <Text fontSize={{base: 'sm', sm: 'l', md:'xl'}} alignItems="left" display="flex">- Upper School</Text>
                   <Text fontSize={{base: 'sm', sm: 'l', md:'xl'}} alignItems="left" display="flex">- Middle School</Text>

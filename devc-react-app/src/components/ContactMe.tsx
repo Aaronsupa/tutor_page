@@ -89,13 +89,13 @@ function ContactMe() {
     
     return(
         <>
-        <Box w={{ base: "90%", sm: "90%", md: "40%"}}  h = {{ base: "25%", sm: "25%", md: "15%"}}>
+        <Box w={{ base: "90%", sm: "90%", md: "30%"}}  h = {{ base: "25%", sm: "25%", md: "15%"}}>
             <Heading as='h2' size='xl' color='#1F4172' display='flex' marginLeft='5%'>
             Contact Me
             </Heading>
-            <Box bg='FFFFF' w='100%' h = '100%' p={4} color='black' borderWidth='2px' borderRadius='lg' borderColor='#D9D9D9' boxShadow='6px 6px #D9D9D9;' shadow='lg'>
+            <Box bg='FFFFF' w='100%' h = '100%' p={4} color='black' borderWidth='2px' borderRadius='lg' borderColor='#D9D9D9' boxShadow='6px 6px #D9D9D9;' shadow='lg' overflowY="scroll">
             <Flex>
-                <Container w = '70%' display='flex' flexDirection='column'>
+                <Container w = '70%' display='flex' flexDirection='column' h = "100%">
                     <Formik
                         initialValues={{ first: '', last: '', email: '', message: ''}}
                         validate={(values) => {
@@ -120,22 +120,32 @@ function ContactMe() {
                             }, 400);
                             setSubmitting(false);
 
-                        }}
+                        }} 
                         >
                         {({ isSubmitting }) => (
-                            <Form>
-                                <Field type="First Name" name="first" placeholder="First Name" validate={validateFirst}/>
-                                <ErrorMessage name="first" component="div" />
-                                <Field type="Last Name" name="last" placeholder="Last Name" validate={validateLast}/>
-                                <ErrorMessage name="last" component="div"/>
-                                <Field type="email" name="email" placeholder="Email" validate={validateEmail}/>
-                                <ErrorMessage name="email" component="div" />
-                                <Field type="text" as = "textarea" name="message" placeholder="Message" validate={validateMessage} />
-                                <ErrorMessage name="message" component="div" />
-                                <button type="submit" disabled={isSubmitting}>
-                                    Submit
-                                </button>
-                            </Form>
+                                <Form>
+                                    <Box display="flex" flexDirection="column" justifyContent="space-between">
+                                        <Box marginTop="1%">
+                                            <Field type="First Name" name="first" placeholder="First Name" validate={validateFirst}/>
+                                            <ErrorMessage name="first" component="div"/>
+                                        </Box>
+                                        <Box marginTop="2%">
+                                            <Field type="Last Name" name="last" placeholder="Last Name" validate={validateLast}/>
+                                            <ErrorMessage name="last" component="div"/>
+                                        </Box>
+                                        <Box marginTop="2%">
+                                            <Field type="email" name="email" placeholder="Email" validate={validateEmail}/>
+                                            <ErrorMessage name="email" component="div" />
+                                        </Box>
+                                        <Box marginTop="2%">
+                                            <Field type="text" as = "textarea" name="message" placeholder="Message" validate={validateMessage} />
+                                            <ErrorMessage name="message" component="div" />
+                                        </Box>
+                                        <button type="submit" disabled={isSubmitting} color="Blue">
+                                            Submit
+                                        </button>
+                                    </Box>
+                                </Form>
                         )}
                     </Formik>
                 </Container>

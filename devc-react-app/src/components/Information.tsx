@@ -14,10 +14,7 @@ const theme = extendTheme({ breakpoints })
 function Information() {
     return (
         <>
-        <Box w={{base: '95%', sm: '90%', md:'55%' }} h = {{base: '30%', sm: '25%', md:'30%' }}>
-        <Heading as='h2' size='xl' color='#1F4172' display='flex' marginLeft='5%'>
-          Information
-        </Heading>
+        <Box w={{base: '95%', sm: '90%', md:'55%' }} h = {{base: '30%', sm: '25%', md:'20%' }}>
           <Box bg='#FEFAF6' w='100%' h = '100%' color='black' borderWidth='2px' borderRadius='lg' borderColor='#D9D9D9' boxShadow='6px 6px #D9D9D9;' shadow='xl' display="flex" alignItems="center" overflowY="scroll">
             <HStack spacing='10px' h = "90%" w = "100%">
               <VStack spacing='24px' h = "100%" w = "40%">

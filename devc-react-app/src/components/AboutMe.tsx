@@ -16,8 +16,9 @@ const theme = extendTheme({ breakpoints })
 function AboutMe() {
     return (
         <>
-        <Box w={{ base: "70%", sm: "70%", md: "40%"}} h = {{ base: "25%", sm: "22%", md: "20%"}} display="flex" flexDirection='column'>
-            <Box bg='#FEFAF6' w='100%' h = '100%' p={3} color='black' borderWidth='2px' borderRadius='lg' borderColor='#D9D9D9' boxShadow='6px 6px #D9D9D9;' shadow='lg' display="flex" alignItems="center">
+        <Box w={{ base: "70%", sm: "70%", md: "45%"}} h = {{ base: "25%", sm: "22%", md: "25%"}} display="flex" flexDirection='column' marginTop="2%">
+            <Box bg='#FEFBF6' w='100%' h = '100%' p={3} color='black' borderWidth='2px' borderRadius='lg' borderColor='#D9D9D9' boxShadow='6px 6px #D9D9D9;' shadow='lg' display="flex" alignItems="center" flexDirection="column">
+                <Heading color="#2C4E80">About Me</Heading>
                 <HStack spacing='24px' h = "80%" w = "100%">
                 <Box w='30%' h='90%'>
                     <Image src={pic} alt='Kendall Johnson' boxSize='100%' objectFit="cover" borderRadius='0.9'/>

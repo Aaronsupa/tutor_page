@@ -35,7 +35,7 @@ function Testimonials() {
 
     return(
         <>
-        <Box w="100%" bg="#1F4172" h="15%" alignItems="center" display="flex" flexDirection="column">
+        <Box w="100%" bg="#2C4E80" h="20%" alignItems="center" display="flex" flexDirection="column">
             <Heading as='h2' size='xl' color='#FFFFFF' display='flex' h="10%" marginTop="2%">
             Testimonials
             </Heading>

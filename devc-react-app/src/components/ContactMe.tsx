@@ -9,6 +9,7 @@ import {    Formik,
 import emailjs from "@emailjs/browser";
 import { useEffect } from "react";
 
+
 const breakpoints = {
     base: '0px',
     sm: '400px',
@@ -62,10 +63,10 @@ function ContactMe() {
     
     return(
         <>
-        <Box w={{ base: "90%", sm: "90%", md: "30%"}}  h = {{ base: "20%", sm: "20%", md: "20%"}} marginBottom="2%">
+        <Box w={{ base: "90%", sm: "90%", md: "30%"}}  h = {{ base: "20%", sm: "20%", md: "20%"}} marginBottom="4%">
             <Box bg='#FEFBF6' w='100%' h = '100%' p={4} color='black' borderWidth='2px' borderRadius='lg' borderColor='#D9D9D9' boxShadow='6px 6px #D9D9D9;' shadow='lg' overflowY="scroll">
             <Flex display="flex" flexDirection="column" justifyContent="space-between">
-                <Heading color="#2C4E80">Contact Me</Heading>
+                <Heading color="#2C4E80" marginBottom="2%">Contact Me</Heading>
                 <Container w = '70%' display='flex' flexDirection='column' h = "90%">
                     <Formik
                         initialValues={{ first: '', last: '', email: '', message: ''}}
@@ -97,22 +98,22 @@ function ContactMe() {
                                 <Form>
                                     <Box display="flex" flexDirection="column" justifyContent="space-between">
                                         <Box marginTop="1%">
-                                            <Field type="First Name" name="first" placeholder="First Name" validate={validateFirst}/>
+                                            <Field type="First Name" name="first" placeholder="First Name" validate={validateFirst} style={{ border: "1px solid #2C4E80", padding: "2px" }}/>
                                             <ErrorMessage name="first" component="div"/>
                                         </Box>
                                         <Box marginTop="2%">
-                                            <Field type="Last Name" name="last" placeholder="Last Name" validate={validateLast}/>
+                                            <Field type="Last Name" name="last" placeholder="Last Name" validate={validateLast} style={{ border: "1px solid #2C4E80", padding: "2px" }}/>
                                             <ErrorMessage name="last" component="div"/>
                                         </Box>
                                         <Box marginTop="2%">
-                                            <Field type="email" name="email" placeholder="Email" validate={validateEmail}/>
-                                            <ErrorMessage name="email" component="div" />
+                                            <Field type="email" name="email" placeholder="Email" validate={validateEmail} style={{ border: "1px solid #2C4E80", padding: "2px" }}/>
+                                            <ErrorMessage name="email" component="div"/>
                                         </Box>
                                         <Box marginTop="2%">
-                                            <Field type="text" as = "textarea" name="message" placeholder="Message" validate={validateMessage} />
+                                            <Field type="text" as = "textarea" name="message" placeholder="Message" validate={validateMessage} style={{ border: "1px solid #2C4E80", padding: "2px" }}/>
                                             <ErrorMessage name="message" component="div" />
                                         </Box>
-                                        <button type="submit" disabled={isSubmitting} color="Blue">
+                                        <button type="submit" disabled={isSubmitting}>
                                             Submit
                                         </button>
                                     </Box>

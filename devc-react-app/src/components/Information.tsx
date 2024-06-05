@@ -16,7 +16,7 @@ function Information() {
         <>
         <Box w={{base: '95%', sm: '90%', md:'55%' }} h = {{base: '30%', sm: '25%', md:'25%' }}>
           <Box bg='#FEFBF6' w='100%' h = '100%' color='black' borderWidth='2px' borderRadius='lg' borderColor='#D9D9D9' boxShadow='6px 6px #D9D9D9;' shadow='xl' display="flex" alignItems="center" overflowY="scroll" flexDirection="column">
-            <Heading color="#2C4E80" marginBottom="2%" marginTop="2%"> Information</Heading>
+            <Heading color="#2C4E80" marginBottom="2%" marginTop="2%"> Information & Scheduling</Heading>
             <HStack spacing='10px' h = "90%" w = "100%">
               <VStack spacing='24px' h = "100%" w = "40%">
                 <Box w='60%' h='100%' display="flex" justifyContent="left" alignItems='center' >

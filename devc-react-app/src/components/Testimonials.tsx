@@ -44,7 +44,7 @@ function Testimonials() {
 
     return(
         <>
-        <Box w={{ base: "100%", sm: "100%", md: "100%"}} bg="#2C4E80" h={{ base: "15%", sm: "15%", md: "15%"}} alignItems="center" display="flex" flexDirection="column">
+        <Box w={{ base: "100%", sm: "100%", md: "100%"}} bg="#2C4E80" h={{ base: "15%", sm: "15%", md: "15%"}} alignItems="center" display="flex" flexDirection="column" borderWidth='2px' borderRadius='lg' borderColor='#2C4E8070' boxShadow='8px 8px #2C4E8070;' shadow='lg'>
             <Box h={{ base: "30%", sm: "30%", md: "10%"}} marginTop="2%">
                 <Heading fontSize={{base: '2xl', sm: '2xl', md:'4xl'}} size='xl' color='#FFFFFF' display='flex'>
                 Testimonials

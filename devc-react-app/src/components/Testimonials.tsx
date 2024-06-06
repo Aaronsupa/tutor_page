@@ -32,16 +32,27 @@ function Testimonials() {
         }
     }
 
+    const breakpoints = {
+        base: '0px',
+        sm: '400px',
+        md: '768px',
+        lg: '992px',
+        xl: '1200px',
+        '2xl': '1536px',
+      }
+
 
     return(
         <>
-        <Box w="100%" bg="#2C4E80" h="20%" alignItems="center" display="flex" flexDirection="column">
-            <Heading as='h2' size='xl' color='#FFFFFF' display='flex' h="10%" marginTop="2%">
-            Testimonials
-            </Heading>
-            <Box h="90%" alignItems="center" display="flex" w="40%" justifyContent="space-between">
+        <Box w={{ base: "100%", sm: "100%", md: "100%"}} bg="#2C4E80" h={{ base: "15%", sm: "15%", md: "15%"}} alignItems="center" display="flex" flexDirection="column">
+            <Box h={{ base: "30%", sm: "30%", md: "10%"}} marginTop="2%">
+                <Heading fontSize={{base: '2xl', sm: '2xl', md:'4xl'}} size='xl' color='#FFFFFF' display='flex'>
+                Testimonials
+                </Heading>
+            </Box>
+            <Box h={{ base: "50%", sm: "50%", md: "90%"}} alignItems="center" display="flex" w={{ base: "70%", sm: "70%", md: "40%"}} justifyContent="space-between" overflowY="clip">
                 <ArrowLeftIcon color="white" id="leftArrow" onClick={handleClickLeft}></ArrowLeftIcon>
-                <Text color="white" w = "80%" overflowY="clip">{ testimonials[contr] }</Text>
+                <Text color="white" w = "80%" overflowY="clip" fontSize={{base: 'sm', sm: 'sm', md:'md'}}>{ testimonials[contr] }</Text>
                 <ArrowRightIcon color="white" id="rightArrow" onClick={handleClickRight}></ArrowRightIcon>
             </Box>
 

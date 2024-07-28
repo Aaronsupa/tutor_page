@@ -1,13 +1,9 @@
-import { Heading, Flex, Container, FormControl, FormLabel, Input, FormHelperText, Button, Link, Box, extendTheme } from "@chakra-ui/react";
+import { Heading, Flex, Container, Box, extendTheme } from "@chakra-ui/react";
 import {    Formik,
-    FormikHelpers,
-    FormikProps,
     Form,
-    Field,
-    FieldProps, 
+    Field, 
     ErrorMessage} from 'formik';
 import emailjs from "@emailjs/browser";
-import { useEffect } from "react";
 
 
 const breakpoints = {

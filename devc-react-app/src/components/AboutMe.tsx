@@ -1,5 +1,4 @@
 import { Heading, HStack, Box, Image } from "@chakra-ui/react"
-import { extendTheme } from "@chakra-ui/react"
 import pic from "../assets/aboutmePic.jpeg"
 
 const breakpoints = {
@@ -10,8 +9,6 @@ const breakpoints = {
     xl: '1200px',
     '2xl': '1536px',
   }
-
-const theme = extendTheme({ breakpoints })
 
 function AboutMe() {
     return (

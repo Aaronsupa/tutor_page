@@ -1,6 +1,6 @@
-import { Box, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Heading, Text } from "@chakra-ui/react";
 import { ArrowRightIcon, ArrowLeftIcon } from '@chakra-ui/icons'
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function Testimonials() {
     const [testimonials, settestimonials] = useState([

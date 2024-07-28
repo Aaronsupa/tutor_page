@@ -63,8 +63,8 @@ function ContactMe() {
     
     return(
         <>
-        <Box w={{ base: "90%", sm: "90%", md: "30%"}}  h = {{ base: "20%", sm: "20%", md: "20%"}} marginBottom="4%">
-            <Box bg='#FEFBF6' w='100%' h = '100%' p={4} color='black' borderWidth='2px' borderRadius='lg' borderColor='#2C4E8070' boxShadow='6px 6px #2C4E8070;' shadow='lg' overflowY="auto">
+        <Box w={{ base: "100%", sm: "100%", md: "100%"}}  h = {{ base: "20%", sm: "20%", md: "20%", lg:'25%'}} marginBottom="4%">
+            <Box w='100%' h = '100%' p={4} color='black' backgroundColor="#102C5710" borderWidth='3px' borderRadius='lg' borderColor='#474F7A80' boxShadow='6px 6px #2C4E8070;' shadow='lg' overflowY="auto">
             <Flex display="flex" flexDirection="column" justifyContent="space-between">
                 <Heading color="#2C4E80" marginBottom="2%">Contact Me</Heading>
                 <Container w = '70%' display='flex' flexDirection='column' h = "90%">

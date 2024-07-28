@@ -16,7 +16,7 @@ const theme = extendTheme({ breakpoints })
 function AboutMe() {
     return (
         <>
-        <Box w={{ base: "80%", sm: "80%", md: "45%"}} h = {{ base: "25%", sm: "25%", md: "23%"}} display="flex" flexDirection='column' marginTop="2%">
+        <Box w={{ base: "80%", sm: "80%", md: "65%", lg: "45%"}} h = {{ base: "25%", sm: "25%", md: "25%", lg:'27%'}} display="flex" flexDirection='column' marginTop="2%">
             <Box bg='#FEFBF6' w='100%' h = '100%' p={3} color='black' borderWidth='3px' borderRadius='lg' borderColor='#474F7A80' boxShadow='8px 8px #474F7A;' shadow='lg' display="flex" alignItems="center" flexDirection="column">
                 <Heading color="#2C4E80">About Me</Heading>
                 <HStack spacing='24px' h = "85%" w = "100%">

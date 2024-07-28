@@ -15,7 +15,6 @@ function App() {
     <>
       <AboutMe></AboutMe>
       <Information></Information>
-      <Testimonials></Testimonials>
       <ContactMe></ContactMe>
     </>
   )

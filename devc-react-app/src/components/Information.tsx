@@ -14,7 +14,7 @@ const theme = extendTheme({ breakpoints })
 function Information() {
     return (
         <>
-        <Box w={{base: '95%', sm: '90%', md:'55%' }} h = {{base: '30%', sm: '25%', md:'25%' }}>
+        <Box w={{base: '95%', sm: '90%', md:'80%', lg:'60%' }} h = {{base: '40%', sm: '35%', md:'30%' }}>
           <Box bg='#FEFBF6' w='100%' h = '100%' color='black' borderWidth='3px' borderRadius='lg' borderColor='#474F7A80' boxShadow='6px 6px #474F7A;' shadow='xl' display="flex" alignItems="center" flexDirection="column">
             <Heading color="#2C4E80" marginBottom="2%" marginTop="2%"> Information & Scheduling</Heading>
             <HStack spacing='10px' h = "90%" w = "100%">

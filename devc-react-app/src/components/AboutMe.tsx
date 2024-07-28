@@ -1,14 +1,6 @@
 import { Heading, HStack, Box, Image } from "@chakra-ui/react"
 import pic from "../assets/aboutmePic.jpeg"
 
-const breakpoints = {
-    base: '0px',
-    sm: '400px',
-    md: '768px',
-    lg: '992px',
-    xl: '1200px',
-    '2xl': '1536px',
-  }
 
 function AboutMe() {
     return (

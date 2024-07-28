@@ -3,14 +3,13 @@ import { ArrowRightIcon, ArrowLeftIcon } from '@chakra-ui/icons'
 import { useState } from "react";
 
 function Testimonials() {
-    const [testimonials, settestimonials] = useState([
-        "Your ability to piece old concepts with new ones along with wanting to attack the most challenging problems presented in class is why you can solve the most difficult test problems. You are extremely intuitive, and if you continue being diligent with your work outside of class next year, I see no reason why you cannot have similar success in AP AB Calculus.",
-        "your dedication to refining your language skills is commendable. Your strong grasp of the fundamentals of grammar continues to shine through, providing a solid foundation for your Spanish proficiency.",
-        "You have been a silent powerhouse for most of the year but have started to effectively collaborate with your peers, showing rock-solid leadership skills. Your consistent reflections show that you are spending time outside of class reviewing material and working on extra practice",
-        "You have worked hard to understand the concepts rather than memorize answers, which has been evident in your assessments",
-        "Your willingness to participate and your optimistic demeanor create a conducive learning environment",
+    const testimonials =
+        "Your ability to piece old concepts with new ones along with wanting to attack the most challenging problems presented in class is why you can solve the most difficult test problems. You are extremely intuitive, and if you continue being diligent with your work outside of class next year, I see no reason why you cannot have similar success in AP AB Calculus."+
+        "your dedication to refining your language skills is commendable. Your strong grasp of the fundamentals of grammar continues to shine through, providing a solid foundation for your Spanish proficiency."+
+        "You have been a silent powerhouse for most of the year but have started to effectively collaborate with your peers, showing rock-solid leadership skills. Your consistent reflections show that you are spending time outside of class reviewing material and working on extra practice"+
+        "You have worked hard to understand the concepts rather than memorize answers, which has been evident in your assessments" +
+        "Your willingness to participate and your optimistic demeanor create a conducive learning environment"+
         "Kendall, your work ethic and discipline are top-notch and exceptional-- it is truly a pleasure having you as a student in Honors Chemistry this year! I have been impressed by your ability to work independently and during group activities. Your responses to CERs and assessments show that you have a good grasp on the material we cover"
-    ])
 
     const [contr, setcontr] = useState(0);
 
@@ -32,14 +31,6 @@ function Testimonials() {
         }
     }
 
-    const breakpoints = {
-        base: '0px',
-        sm: '400px',
-        md: '768px',
-        lg: '992px',
-        xl: '1200px',
-        '2xl': '1536px',
-      }
 
 
     return(

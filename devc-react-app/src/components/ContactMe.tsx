@@ -1,21 +1,10 @@
-import { Heading, Flex, Container, Box, extendTheme } from "@chakra-ui/react";
+import { Heading, Flex, Container, Box } from "@chakra-ui/react";
 import {    Formik,
     Form,
     Field, 
     ErrorMessage} from 'formik';
 import emailjs from "@emailjs/browser";
 
-
-const breakpoints = {
-    base: '0px',
-    sm: '400px',
-    md: '768px',
-    lg: '960px',
-    xl: '1200px',
-    '2xl': '1536px',
-  }
-
-const theme = extendTheme({ breakpoints })
 
 function ContactMe() {
 
@@ -66,7 +55,7 @@ function ContactMe() {
                 <Container w = '70%' display='flex' flexDirection='column' h = "90%">
                     <Formik
                         initialValues={{ first: '', last: '', email: '', message: ''}}
-                        validate={(values) => {
+                        validate={() => {
                         }}
                         onSubmit={(values, { setSubmitting }) => {
                             setTimeout(() => {

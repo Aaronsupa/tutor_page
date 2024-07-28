@@ -81,9 +81,9 @@ function ContactMe() {
                                     message: values.message,
 
                             };
-                            alert(JSON.stringify(values, null, 2));
-                            emailjs.send("","", templateParams, {
-                                publicKey: "",
+                            alert("Form Submitted");
+                            emailjs.send(import.meta.env.VITE_SERVICE, import.meta.env.VITE_TEMPLATE, templateParams, {
+                                publicKey: import.meta.env.VITE_KEY,
                               }).then(function(response) {
                                 console.log('SUCCESS!', response.status, response.text);
                               }, function(error) {
@@ -91,7 +91,6 @@ function ContactMe() {
                               });
                             }, 400);
                             setSubmitting(false);
-
                         }} 
                         >
                         {({ isSubmitting }) => (

@@ -31,7 +31,14 @@ function Testimonials() {
         }
     }
 
-
+    const breakpoints = {
+        base: '0px',
+        sm: '400px',
+        md: '768px',
+        lg: '992px',
+        xl: '1200px',
+        '2xl': '1536px',
+      }
 
     return(
         <>

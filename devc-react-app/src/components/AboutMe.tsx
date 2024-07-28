@@ -3,6 +3,16 @@ import pic from "../assets/aboutmePic.jpeg"
 
 
 function AboutMe() {
+
+    const breakpoints = {
+        base: '0px',
+        sm: '400px',
+        md: '768px',
+        lg: '992px',
+        xl: '1200px',
+        '2xl': '1536px',
+      }
+
     return (
         <>
         <Box w={{ base: "80%", sm: "80%", md: "65%", lg: "45%"}} h = {{ base: "25%", sm: "25%", md: "25%", lg:'27%'}} display="flex" flexDirection='column' marginTop="2%">

@@ -1,13 +1,5 @@
 import { Heading, HStack, VStack, Stack, Divider, Box, Text, Link, Button, ListItem, UnorderedList } from "@chakra-ui/react";
 
-const breakpoints = {
-  base: '0px',
-  sm: '400px',
-  md: '768px',
-  lg: '992px',
-  xl: '1200px',
-  '2xl': '1536px',
-}
 
 function Information() {
     return (

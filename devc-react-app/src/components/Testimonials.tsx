@@ -31,15 +31,6 @@ function Testimonials() {
         }
     }
 
-    const breakpoints = {
-        base: '0px',
-        sm: '400px',
-        md: '768px',
-        lg: '992px',
-        xl: '1200px',
-        '2xl': '1536px',
-      }
-
     return(
         <>
         <Box w={{ base: "100%", sm: "100%", md: "100%"}} bg="#2C4E80" h={{ base: "15%", sm: "15%", md: "15%"}} alignItems="center" display="flex" flexDirection="column" borderWidth='2px' borderRadius='lg' borderColor='#2C4E8070' boxShadow='8px 8px #2C4E8070;' shadow='lg'>
